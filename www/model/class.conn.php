@@ -1,6 +1,6 @@
 <?php
 
-class Conn{
+class conn{
     private $user = "";
     private $host = "";
     private $pass = "";
@@ -28,7 +28,7 @@ class Conn{
 
     }
 
-    private function getConn()
+    public function getConn()
     {
         $this->connect();
         return $this->conn;

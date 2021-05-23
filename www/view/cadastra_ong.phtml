@@ -1,5 +1,6 @@
 <?php
 include("./topo.phtml");
+require('../controller/ong.php');
 ?>
 
  <!-- INICIO FORM -->
@@ -13,10 +14,13 @@ include("./topo.phtml");
                             <h3>Cadastre sua <span>ONG!</span></h3>
                         </div>
                     </div>
-							<form action="">
+							<form action="./controller/ong.php">
 								<div class="mt-10">
-									<input type="text" name="nome_fantasia" placeholder="Nome Fantansia"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome Fantansia'" required
+									<input type='hidden' name='a_id' value='1'>
+								</div>
+								<div class="mt-10">
+									<input type="text" name="nome_social" placeholder="Nome Social"
+										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome Social'" required
 										class="single-input">
 								</div>
 								<div class="mt-10">
