@@ -17,18 +17,23 @@ class conn{
     }
 
     private function connect(){
-        $conn = new mysqli($this->host, $this->user, $this->pass,$this->db);
-        $conn = new PDO('mysql:host={$this->host};dbname={$this->db}', $this->user, $this->pass);
-   
-        if($conn->connect_error){
-            die("Problema na Conexão {$conn->connect_error}");
-        }
 
+        $options = [
+            \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+            \PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
+        $dsn = "mysql:host={$this->host};dbname={$this->db};";
+        try {
+             $conn = new \PDO($dsn, $this->user, $this->pass, $options);
+        } catch (\PDOException $e) {
+             throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
         return $this->conn = $conn;
 
     }
 
-    public function getConn()
+    private function getConn()
     {
         $this->connect();
         return $this->conn;
@@ -37,7 +42,7 @@ class conn{
     private function closeConn(){
         $this->conn->close();
     }
-
+/*
 
     public function select($sql){
         if(!$sql){
@@ -50,18 +55,22 @@ class conn{
         return $resultado;
 
     }
-
+*/
     public function insert($sql){
         if(!$sql){
             return false;
         }
         $this->getConn(); 
+        $stmt= $this->conn->prepare($sql);
+        $stmt->execute();
+
+/*
         if ($this->conn->query($sql) === TRUE) {
             return "Dados salvo com sucesso";
         } else {
             return "Error ao inserir " . $sql . "<br>" . $this->conn->error;
         }
-
+*/
     }
 
 
