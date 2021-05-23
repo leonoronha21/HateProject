@@ -431,7 +431,7 @@ h3 {
 .boxed-btn4:hover {
   background: #ff3500;
   color: #fff;
-  border: 1px solid #ff3500;
+  border: 1px solid #fff;;
 }
 
 /* line 64, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_btn.scss */
@@ -1403,8 +1403,8 @@ h3 {
   font-family: "Poppins", sans-serif;
   font-size: 35px;
   font-weight: 100;
-  margin-top: -100px;
-  margin-bottom: 50px;
+  margin-top: -20px;
+  margin-bottom: 30px;
   line-height: 35px;
 }
 

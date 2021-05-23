@@ -7,13 +7,13 @@ include("./topo.phtml");
         <div class="single_slider slider_bg_1 d-flex align-items-center">
             <div class="container">
                 <div class="row">
-					<div class="col-lg-8 col-md-10">
+					<div class="col-lg-8 col-md-15">
 						<div class="col-lg-1 col-md-2">
                         <div class="slider_text_form">
-                            <h3>Cadastre sua<br> <span>ONG!</span></h3>
+                            <h3>Cadastre sua <span>ONG!</span></h3>
                         </div>
                     </div>
-							<form action="POST">
+							<form action="">
 								<div class="mt-10">
 									<input type="text" name="nome_fantasia" placeholder="Nome Fantansia"
 										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome Fantansia'" required
@@ -59,6 +59,11 @@ include("./topo.phtml");
 										onfocus="this.placeholder = ''" onblur="this.placeholder = 'seu_email@dominio.com.br'" required
 										class="single-input">
 								</div>
+								<div class="my-1">
+        							<div class="col-md-12 text-center">
+										<button type="submit" class="boxed-btn4" >Cadastrar!</button>
+        							</div>
+    							</div>
 							</form>
 					</div>
 				</div>
