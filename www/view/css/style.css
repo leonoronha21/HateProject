@@ -1393,6 +1393,25 @@ h3 {
   line-height: 85px;
 }
 
+.slider_text_form {
+  position: top;
+  z-index: 6;
+}
+
+.slider_text_form h3 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+  margin-top: -100px;
+  margin-bottom: 50px;
+  line-height: 35px;
+}
+
+.slider_text_form h3 span {
+  font-weight: 800;
+}
+
 /* line 37, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
 .slider_area .single_slider .slider_text h3 span {
   font-weight: 800;
@@ -1454,6 +1473,14 @@ h3 {
   position: absolute;
   bottom: 0;
   right: 15%;
+  bottom: -94px;
+  z-index: 1;
+}
+
+.dog_thumb_form {
+  position: absolute;
+  bottom: 0;
+  right: 8%;
   bottom: -94px;
   z-index: 1;
 }
@@ -1665,8 +1692,10 @@ h3 {
     position: absolute;
     right: 0;
     bottom: 0;
-    border-top: 15px solid #ffffff;
-    border-left: 15px solid #ffffff;
+    border-top: 15px solid
+ #ffffff;
+    border-left: 15px solid
+ #ffffff;
     top: auto;
     width: 50%;
     height: 60%;
