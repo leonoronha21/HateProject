@@ -2017,10 +2017,20 @@ h3 {
 .team_area .single_team .member_name .mamber_inner {
   border-radius: 5px;
   display: inline-block;
-  padding: 16px 40px 11px 40px;
+  padding: 100px 20px 20px 10px;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 2, 0.08);
+}
+
+
+.team_area2 .single_team2 .member_name2 .mamber_inner2 {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 20px 20px 10px;
   background-color: white;
   box-shadow: 0px 16px 35px 0px rgba(0, 0, 2, 0.08);
 }
+
 
 /* line 29, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_team.scss */
 .team_area .single_team .member_name .mamber_inner h4 {

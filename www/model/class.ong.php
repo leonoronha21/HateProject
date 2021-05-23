@@ -32,7 +32,7 @@ class ong extends conn{
                     '{$this->getEmail()}',
                     '1', 
                     'now()')";
-                    var_dump($sql);
+     
         $resultado=$this->insert($sql);
         return $resultado;
     
@@ -44,20 +44,28 @@ class ong extends conn{
               WHERE 
                 `id` = '{$this->getId()}'
         ";
-        var_dump($sql);
         $resultado=$this->select($sql);
         return $resultado;
     
     }
 
     public function atualiza(){
-        $sql="SELECT * FROM 
-                `ong` 
-              WHERE 
+        $sql="UPDATE 
+                ong
+            SET 
+                `nome_fantasia`     = '{$this->getNome_fantasia()}', 
+                `nome_social`       = '{$this->getNome_social()}', 
+                `registro_cartorio` = '{$this->getRegistro_cartorio()}', 
+                `endereco`          = '{$this->getEndereco()}', 
+                `numero_endereco`   = '{$this->getNumero_endereco()}', 
+                `bairro`            = '{$this->getBairro()}',  
+                `cep`               = '{$this->getCep()}', 
+                `estado`            = '{$this->getEstado()}',  
+                `email`             = '{$this->getEmail()}'
+            WHERE
                 `id` = '{$this->getId()}'
         ";
-        var_dump($sql);
-        $resultado=$this->select($sql);
+        $resultado=$this->update($sql);
         return $resultado;
     
     }

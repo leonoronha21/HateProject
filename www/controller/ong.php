@@ -16,11 +16,11 @@ $ong->setEmail($_GET['email']);
 
 if($_GET['acao'] == "cadastrar"){
    $ong->cadastra();
-}else if ($_GET['acao'] == "atualizar"){
+}else if ($_GET['acao'] == "editar"){
+    $ong->setId($_GET['id']);
     $ong->atualiza();
 }
-
-echo "<meta http-equiv='refresh' content='1; url=../view/ong.phtml?acao=dados'>";
+echo "<meta http-equiv='refresh' content='1; url=../view/ong.phtml'>";
 
 
 

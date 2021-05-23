@@ -91,7 +91,6 @@ switch ($acao) {
 		$ong = new ong(); 
 		$ong->setId(1);
 		$dados = $ong->busca();
-		var_dump($dados);
 		foreach ($dados as $dado) {
 echo"<div class='slider_area'>
         <div class='single_slider slider_bg_1 d-flex align-items-center'>
@@ -104,8 +103,11 @@ echo"<div class='slider_area'>
                         </div>
                     </div>
                             <form action='../controller/ong.php'>
+								<div class='mt-10'>
+									<input type='hidden' name='id' value={$dado['id']}>
+								</div>
                                 <div class='mt-10'>
-                                    <input type='hidden' name='a_id' value='1'>
+                                    <input type='hidden' name='a_id' value={$dado['a_id']}>
                                 </div>
                                 <div class='mt-10'>
                                     <input type='hidden' name='acao' value='editar'>
@@ -172,12 +174,62 @@ echo"<div class='slider_area'>
 ";
 		}
 		break;
-    case "exibir":
-        echo "i equals 2";
-        break;
+	default:
+	include("../model/class.ong.php");
+	$ong = new ong(); 
+	$ong->setId(1);
+	$dados = $ong->busca();
+	foreach ($dados as $dado) {
+
+	echo "<div class='slider_area'>
+	<div class='single_slider slider_bg_1 d-flex align-items-center'>
+		<div class='container'>
+				<div class='team_area'>
+					<div class='row justify-content-center'>
+						<div class='col-lg-4 col-md-2'>
+							<div class='single_team'>
+								<div class='thumb'>
+									<img src='img/team/1.png' alt=''>
+								</div>
+								<div class='member_name text-center'>
+									<div class='mamber_inner'>
+										<h4>Nome Fantasia:</h4>
+										<p>{$dado["nome_fantasia"]}</p>
+										<h4>Nome Social:</h4>
+										<p>{$dado["nome_social"]}</p>
+										<h4>Registro Cartorio:</h4>
+										<p>{$dado["registro_cartorio"]}</p>
+										<h4>Endereço:</h4>
+										<p>{$dado["endereco"]}</p>
+										<p>{$dado["numero_endereco"]}</p>
+										<h4>Bairro:</h4>
+										<p>{$dado["bairro"]}</p>
+										<h4>CEP:</h4>
+										<p>{$dado["cep"]}</p>
+										<h4>Estado:</h4>
+										<p>{$dado["estado"]}</p>
+										<h4>E-mail</h4>
+										<p>{$dado["email"]}</p>
+									</div>
+								</div>
+							</div>
+				
+						</div>
+						</div>
+					</div>
+				</div>			
+				<div class='my-1'>
+				<div class='col-md-12 text-top'>
+					<a href='./ong.phtml?acao=editar' class='boxed-btn3'>Edita</a>
+				</div>
+		</div>		
+	
+	</div>
+							";
+	}
+							break;
 }
  
 include("rodape.phtml");
 ?>
-
 
