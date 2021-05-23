@@ -6,7 +6,7 @@ services:
             - "80:80"
         volumes:
             - ./www:/var/www/html/
+            - ./conf/docker-php.conf:/etc/apache2/conf-enabled/docker-php.conf
         networks:
             - default
-volumes:
-    persistent:
+
