@@ -14,11 +14,12 @@ class ong extends conn{
     private $estado = "";
     private $email = "";
 
-    public function cadastra_ong(){
+    public function cadastra(){
         $sql = "INSERT INTO 
                     `ong` 
                  VALUES 
                 (
+                    '',
                     '{$this->getA_id()}',
                     '{$this->getNome_fantasia()}', 
                     '{$this->getNome_social()}',
@@ -30,10 +31,35 @@ class ong extends conn{
                     '{$this->getEstado()}', 
                     '{$this->getEmail()}',
                     '1', 
-                    CURRENT_TIMESTAMP)";
-        #$resultado=$this->insert($sql);
-        #return $resultado;
-        return $this->getConn();
+                    'now()')";
+                    var_dump($sql);
+        $resultado=$this->insert($sql);
+        return $resultado;
+    
+    }
+
+    public function busca(){
+        $sql="SELECT * FROM 
+                `ong` 
+              WHERE 
+                `id` = '{$this->getId()}'
+        ";
+        var_dump($sql);
+        $resultado=$this->select($sql);
+        return $resultado;
+    
+    }
+
+    public function atualiza(){
+        $sql="SELECT * FROM 
+                `ong` 
+              WHERE 
+                `id` = '{$this->getId()}'
+        ";
+        var_dump($sql);
+        $resultado=$this->select($sql);
+        return $resultado;
+    
     }
 
     /**
