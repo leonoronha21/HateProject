@@ -182,47 +182,46 @@ echo"<div class='slider_area'>
 	foreach ($dados as $dado) {
 
 	echo "<div class='slider_area'>
-	<div class='single_slider slider_bg_1 d-flex align-items-center'>
-		<div class='container'>
-				<div class='team_area'>
-					<div class='row justify-content-center'>
-						<div class='col-lg-4 col-md-2'>
-							<div class='single_team'>
-								<div class='thumb'>
-									<img src='img/team/1.png' alt=''>
-								</div>
-								<div class='member_name text-center'>
-									<div class='mamber_inner'>
-										<h4>Nome Fantasia:</h4>
-										<p>{$dado["nome_fantasia"]}</p>
-										<h4>Nome Social:</h4>
-										<p>{$dado["nome_social"]}</p>
-										<h4>Registro Cartorio:</h4>
-										<p>{$dado["registro_cartorio"]}</p>
-										<h4>Endereço:</h4>
-										<p>{$dado["endereco"]}</p>
-										<p>{$dado["numero_endereco"]}</p>
-										<h4>Bairro:</h4>
-										<p>{$dado["bairro"]}</p>
-										<h4>CEP:</h4>
-										<p>{$dado["cep"]}</p>
-										<h4>Estado:</h4>
-										<p>{$dado["estado"]}</p>
-										<h4>E-mail</h4>
-										<p>{$dado["email"]}</p>
-									</div>
-								</div>
+			<div class='single_slider slider_bg_1 d-flex align-items-center'>
+				<div class='container'>
+			<div class='pet_care_area'>
+        	<div class='container'>
+            	<div class='row align-items-center'>
+                	<div class='col-lg-5 col-md-6'>
+                    	<div class='pet_thumb'>
+                        	<img src='img/about/pet_care.png' alt=''>
+                    </div>
+                </div><div class='col-lg-6 offset-lg-1 col-md-6'>
+				<div class='pet_info'>
+				<div class='teste'>
+					<div class='section_title' >
+						<h3>
+							<span>Dados de sua ONG!</span>
+						</h3>
+						<br>
+							<pp>Nome Fantasia: <b>{$dado["nome_fantasia"]}</pp></b><br></b>
+							<pp>Nome Social:<b> {$dado["nome_social"]}</pp><br></b>
+							<pp>Registro Cartorio:</b> {$dado["registro_cartorio"]}</pp><br></b>
+							<pp>Endereço:<b> {$dado["endereco"]}</b> nº:<b> {$dado["numero_endereco"]}</pp><br></b>
+							<pp>Bairro:<b> {$dado["bairro"]}</pp><br></b>
+							<pp>CEP:<b> {$dado["cep"]}</pp><br></b>
+							<pp>Estado:<b> {$dado["estado"]}</pp><br></b>
+							<pp>E-mail: <b> {$dado["email"]}</pp><br></b>
+							<div class='my-1'>
+							<div class='col-md-12 text-center'><br>
+								<a href='./ong.phtml?acao=editar' class='boxed-btn3'>Edita</a>
 							</div>
+					</div>
+				</div>
+							</div>	</div>
 				
 						</div>
 						</div>
 					</div>
 				</div>			
-				<div class='my-1'>
-				<div class='col-md-12 text-top'>
-					<a href='./ong.phtml?acao=editar' class='boxed-btn3'>Edita</a>
-				</div>
-		</div>		
+			
+		</div>		</div>		
+	
 	
 	</div>
 							";
@@ -232,4 +231,3 @@ echo"<div class='slider_area'>
  
 include("rodape.phtml");
 ?>
-

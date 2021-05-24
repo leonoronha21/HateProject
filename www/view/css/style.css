@@ -516,15 +516,17 @@ h3 {
 /* line 2, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_section_title.scss */
 .section_title h3 {
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 700px;
   line-height: 60px;
   color: #191d34;
   font-family: "Poppins", sans-serif;
+  
 }
 
 /* line 8, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_section_title.scss */
 .section_title h3 span {
-  font-weight: 300;
+  font-weight: 500px;
+
 }
 
 @media (max-width: 767px) {
@@ -551,12 +553,35 @@ h3 {
   }
 }
 
+.teste  {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 100px 20px 20px 10px;
+  background-color: white;
+}
+
 /* line 24, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_section_title.scss */
 .section_title p {
   font-size: 16px;
   line-height: 30px;
   color: #909092;
   font-weight: 400;
+}
+
+.section_title pp {
+  font-size: 16px;  
+  line-height: 30px;
+  color: #fd7e14;
+  font-weight: 500px;
+  
+}
+
+.section_title pp b {
+  font-size: 16px;  
+  line-height: 30px;
+  color: #fd7e14;
+  font-weight: 500px;
+  
 }
 
 /* line 31, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_section_title.scss */
