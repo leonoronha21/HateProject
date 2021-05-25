@@ -26,10 +26,10 @@ if($row['email']==$usuario && $row['senha']==$senha){
     
     $variavel=$_SESSION['email'];
     
-   header('Location: index.php');
+   //header('Location: index.php');
     
 }else{
-    header('Location: login.html');
+    //header('Location: login.html');
 }
 
 ?>
